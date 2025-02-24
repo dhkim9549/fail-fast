@@ -25,10 +25,15 @@ export default function Home() {
           cont="한국주택금융공사에서 제공하는 전세보증 상품 추천 서비스"
           href="hf-api/hg-jnse-rcmd"
         />
-        <Item
+         <Item
           title="은행별 전세대출 금리"
           cont="한국주택금융공사 보증서 담보 시중은행 대출의 고객 특성별 금리"
           href="hf-api/rent-loan-multi-info"
+        />
+        <Item
+          title="KOSPI"
+          cont="KOSPI"
+          href="ff-api/kospi-cap"
         />
       </div>
       <Footer />
