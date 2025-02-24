@@ -5,21 +5,26 @@ const columns = [
   {
     field: "name",
     headerName: "종목명",
-    width: 100,
+    width: 200,
     headerAlign: "center",
     align: "center",
   },
   {
     field: "cap",
-    headerName: "시가총액",
+    headerName: "시가총액 (조 원)",
     width: 150,
     type: "number",
     headerAlign: "center",
+    valueFormatter: (value) => {
+      if (value == null) {
+        return "";
+      }
+      return value.toLocaleString(undefined, { minimumFractionDigits: 3 });
+    },
   },
 ];
 
 export default function DataTable({ stockList }) {
-
   console.log(">>>>>> 1 stockList = " + stockList);
 
   let rows = [];
@@ -27,7 +32,7 @@ export default function DataTable({ stockList }) {
     let row = {
       id: e.name,
       name: e.name,
-      cap: Number(e.cap),
+      cap: Number(e.cap / 10000),
     };
     rows.push(row);
   });
