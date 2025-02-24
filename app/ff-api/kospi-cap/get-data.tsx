@@ -7,7 +7,7 @@ export async function getKospiCap(queryObj) {
   const API_URL = process.env.API_SERVER_URL;
 
   let res = await fetch(API_URL + "/api/get-kospi-cap", {
-    next: { revalidate: 600 },
+    next: { revalidate: 60 },
   });
 
   let resJson = await res.json();
