@@ -61,7 +61,7 @@ export default function RentLoanMultiInfo() {
               <DataGrid stockList={stockList} />
             </div>
             <div className="mt-16 sm:mt-0 px-8 w-full lg:w-[550px]">
-              <div className="mb-4 w-full text-center">Kospi</div>
+              <div className="mb-4 w-full text-center">Kospi (top 50)</div>
               <div className="">
                 <BChart chartData={chartData} />
               </div>
