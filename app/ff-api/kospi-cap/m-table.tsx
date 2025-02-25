@@ -12,7 +12,7 @@ const columns = [
   {
     field: "cap",
     headerName: "시가총액 (조 원)",
-    width: 150,
+    width: 130,
     type: "number",
     headerAlign: "center",
     valueFormatter: (value) => {
@@ -25,8 +25,6 @@ const columns = [
 ];
 
 export default function DataTable({ stockList }) {
-  console.log(">>>>>> 1 stockList = " + stockList);
-
   let rows = [];
   stockList.forEach((e) => {
     let row = {
@@ -42,6 +40,7 @@ export default function DataTable({ stockList }) {
     <div style={{ height: "100%", width: "100%" }} className="bg-white">
       <DataGrid
         rows={rows}
+        rowHeight={25}
         columns={columns}
         hideFooterPagination={true}
         sx={{

@@ -55,16 +55,16 @@ export default function RentLoanMultiInfo() {
         </blockquote>
       </div>
       <div className="m-4 flex flex-wrap">
-        {(chartData) ? (
+        {chartData ? (
           <>
-            <div className="w-full sm:w-[500px]">
-              <DataGrid stockList={stockList} />
-            </div>
-            <div className="mt-16 sm:mt-0 px-8 w-full lg:w-[550px]">
+            <div className="mt-16 sm:mt-0 px-8 w-full lg:w-[700px]">
               <div className="mb-4 w-full text-center">Kospi (top 50)</div>
               <div className="">
                 <BChart chartData={chartData} />
               </div>
+            </div>
+            <div className="w-full sm:w-[350px]">
+              <DataGrid stockList={stockList} />
             </div>
           </>
         ) : (

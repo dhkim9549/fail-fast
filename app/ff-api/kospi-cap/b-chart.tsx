@@ -27,7 +27,7 @@ export default function BChart({ chartData }) {
         },
       },
       size: {
-        height: 400,
+        height: 550,
       },
       bindto: "#chart",
     });
