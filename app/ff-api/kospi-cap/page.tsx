@@ -37,8 +37,8 @@ export default function RentLoanMultiInfo() {
     let chartDataArr = [];
     items.forEach((e) => {
       let eDataArr = [];
-      eDataArr.push(e.name);
-      eDataArr.push(e.cap);
+      eDataArr.push(e.stockNm);
+      eDataArr.push(e.stockCap);
       chartDataArr.push(eDataArr);
     });
     let chartDataObj = { chartDataArr: chartDataArr };

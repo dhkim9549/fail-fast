@@ -3,14 +3,14 @@ import { NumericFormat } from "react-number-format";
 
 const columns = [
   {
-    field: "name",
+    field: "stockNm",
     headerName: "종목명",
     width: 200,
     headerAlign: "center",
     align: "center",
   },
   {
-    field: "cap",
+    field: "stockCap",
     headerName: "시가총액 (조 원)",
     width: 130,
     type: "number",
@@ -28,13 +28,13 @@ export default function DataTable({ stockList }) {
   let rows = [];
   stockList.forEach((e) => {
     let row = {
-      id: e.name,
-      name: e.name,
-      cap: Number(e.cap / 10000),
+      id: e.stockNm,
+      stockNm: e.stockNm,
+      stockCap: Number(e.stockCap / 10000),
     };
     rows.push(row);
   });
-  rows.sort((a, b) => b.cap - a.cap);
+  rows.sort((a, b) => b.stockCap - a.stockCap);
 
   return (
     <div style={{ height: "100%", width: "100%" }} className="bg-white">
