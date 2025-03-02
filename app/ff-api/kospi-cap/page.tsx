@@ -57,7 +57,7 @@ export default function RentLoanMultiInfo() {
       <div className="m-4 flex flex-wrap">
         {chartData ? (
           <>
-            <div className="mt-16 sm:mt-0 px-8 w-full lg:w-[700px]">
+            <div className="mt-16 sm:mt-0 px-0 lg:px-8 w-full lg:w-[700px]">
               <div className="mb-4 w-full text-center">Kospi (top 50)</div>
               <div className="">
                 <BChart chartData={chartData} />
