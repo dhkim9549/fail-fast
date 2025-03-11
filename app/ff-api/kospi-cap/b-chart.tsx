@@ -22,7 +22,7 @@ export default function BChart({ chartData }) {
       },
       treemap: {
         label: {
-          threshold: 0.01,
+          threshold: 0.001,
           fontSize: 40,
         },
       },
