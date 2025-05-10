@@ -63,7 +63,7 @@ export default function RentLoanMultiInfo() {
                 <BChart chartData={chartData} />
               </div>
             </div>
-            <div className="w-full sm:w-[350px]">
+            <div className="w-full sm:w-[430px]">
               <DataGrid stockList={stockList} />
             </div>
           </>
