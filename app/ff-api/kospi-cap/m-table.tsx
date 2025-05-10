@@ -22,6 +22,19 @@ const columns = [
       return value.toLocaleString(undefined, { minimumFractionDigits: 3 });
     },
   },
+  {
+    field: "PER",
+    headerName: "PER",
+    width: 90,
+    type: "number",
+    headerAlign: "center",
+    valueFormatter: (value) => {
+      if (value == null) {
+        return "";
+      }
+      return value.toLocaleString(undefined, { minimumFractionDigits: 2 });
+    },
+  },
 ];
 
 export default function DataTable({ stockList }) {
@@ -31,6 +44,7 @@ export default function DataTable({ stockList }) {
       id: e.stockNm,
       stockNm: e.stockNm,
       stockCap: Number(e.stockCap / 10000),
+      PER: Number(e.PER),
     };
     rows.push(row);
   });
