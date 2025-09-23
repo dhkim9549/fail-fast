@@ -3,16 +3,12 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { use } from 'react'
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-
-import Title from '@/app/ui/title';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
 
 import DataGrid from './m-table';
 import BChart from './b-chart';
@@ -33,9 +29,9 @@ export default function RentLoanMultiInfo({
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  let [loanYm, setLoanYm] = useState(use(searchParams).loanYm ?? "L1M");
-  let [bankLst, setBankLst] = useState([]);
-  let [chartData, setChartData] = useState();
+  const [loanYm, setLoanYm] = useState(use(searchParams).loanYm ?? "L1M");
+  const [bankLst, setBankLst] = useState([]);
+  const [chartData, setChartData] = useState();
 
   useEffect(() => {
     getData();
@@ -45,24 +41,24 @@ export default function RentLoanMultiInfo({
 
     console.log("getData() start...");
 
-    let params = new URLSearchParams();
+    const params = new URLSearchParams();
     params.set("loanYm", loanYm);
     replace(`${pathname}?${params.toString()}`);
 
     setChartData();
 
-    let items = await getLoanRateData(loanYm);
+    const items = await getLoanRateData(loanYm);
   
     setBankLst(items);
 
-    let chartDataArr = [];
+    const chartDataArr = [];
     items.forEach((e) => {
-      let eDataArr = [];
+      const eDataArr = [];
       eDataArr.push(e.bankNm);
       eDataArr.push(e.loanAmt);
       chartDataArr.push(eDataArr);
     })
-    let chartDataObj = {"chartDataArr" : chartDataArr};
+    const chartDataObj = {"chartDataArr" : chartDataArr};
     setChartData(chartDataObj);
 
     console.log("getData() end...");
