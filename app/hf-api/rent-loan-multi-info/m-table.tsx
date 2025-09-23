@@ -1,5 +1,4 @@
 import { DataGrid } from '@mui/x-data-grid';
-import { NumericFormat } from 'react-number-format';
 
 const columns = [
   { field: 'bankNm', headerName: '은행', width: 100, headerAlign: 'center', align: 'center' },
@@ -17,9 +16,9 @@ const columns = [
 
 export default function DataTable({bankList}) {
 
-  let rows = [];
+  const rows = [];
   bankList.forEach((e) => {
-    let row = {
+    const row = {
       "id": e.bankNm,
       "bankNm": e.bankNm,
       "avgLoanRat2": Number(e.avgLoanRat2),
