@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { getRcmdProdData } from './get-data';
-import GrntProdItem from './grnt-prod-item';
-import MySkel from './MySkel';
+import { getRcmdProdData } from "./get-data";
+import GrntProdItem from "./grnt-prod-item";
+import MySkel from "./MySkel";
 
-export default function ProdPanel({queryObj}) {
-
-  let [rcmdItems, setRcmdItems] = useState();
-  let [prodInfoObj, setProdInfoMap] = useState();
-  let [maxRentAmtObj, setMaxRentAmtMap] = useState();
-  let [loanRatObj, setLoanRatObj] = useState();
+export default function ProdPanel({ queryObj }) {
+  const [rcmdItems, setRcmdItems] = useState();
+  const [prodInfoObj, setProdInfoMap] = useState();
+  const [maxRentAmtObj, setMaxRentAmtMap] = useState();
+  const [loanRatObj, setLoanRatObj] = useState();
 
   useEffect(() => {
     setRcmdItems();
@@ -24,22 +23,24 @@ export default function ProdPanel({queryObj}) {
 
   return (
     <div>
-      {rcmdItems &&
-        <div className="m-4 p-4">
-          {rcmdItems.length} 건이 조회되었습니다.
-        </div>
-      }
+      {rcmdItems && (
+        <div className="m-4 p-4">{rcmdItems.length} 건이 조회되었습니다.</div>
+      )}
       <div className="m-4 flex flex-wrap gap-3">
-       {rcmdItems ? rcmdItems.map(x => 
-         <GrntProdItem
-           key={x.rcmdProrRnk}
-           prodObj={x}
-           prodInfo={prodInfoObj[x.grntDvcd]}
-           maxRentAmtList={maxRentAmtObj[x.grntDvcd]}
-           loanRat={loanRatObj[x.grntDvcd]}
-         />
-       ) : <MySkel/>}
+        {rcmdItems ? (
+          rcmdItems.map((x) => (
+            <GrntProdItem
+              key={x.rcmdProrRnk}
+              prodObj={x}
+              prodInfo={prodInfoObj[x.grntDvcd]}
+              maxRentAmtList={maxRentAmtObj[x.grntDvcd]}
+              loanRat={loanRatObj[x.grntDvcd]}
+            />
+          ))
+        ) : (
+          <MySkel />
+        )}
       </div>
     </div>
-  )
+  );
 }
