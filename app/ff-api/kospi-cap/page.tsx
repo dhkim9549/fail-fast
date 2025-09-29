@@ -3,23 +3,14 @@
 import { useState } from "react";
 import { useEffect } from "react";
 
-import Title from "@/app/ui/title";
-
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import Paper from "@mui/material/Paper";
-import Card from "@mui/material/Card";
-
 import DataGrid from "./m-table";
 import BChart from "./b-chart";
 import MySkel from "./MySkel";
 import { getKospiCap } from "./get-data";
 
 export default function RentLoanMultiInfo() {
-  let [stockList, setStockList] = useState([]);
-  let [chartData, setChartData] = useState();
+  const [stockList, setStockList] = useState([]);
+  const [chartData, setChartData] = useState();
 
   useEffect(() => {
     getData();
@@ -30,18 +21,18 @@ export default function RentLoanMultiInfo() {
 
     setChartData();
 
-    let items = await getKospiCap({});
+    const items = await getKospiCap({});
 
     setStockList(items);
 
-    let chartDataArr = [];
+    const chartDataArr = [];
     items.forEach((e) => {
-      let eDataArr = [];
+      const eDataArr = [];
       eDataArr.push(e.stockNm);
       eDataArr.push(e.stockCap);
       chartDataArr.push(eDataArr);
     });
-    let chartDataObj = { chartDataArr: chartDataArr };
+    const chartDataObj = { chartDataArr: chartDataArr };
     setChartData(chartDataObj);
 
     console.log("getData() end...");
