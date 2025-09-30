@@ -8,7 +8,7 @@ import "billboard.js/dist/billboard.css"; // default css
 
 export default function BChart({ chartData }) {
   useEffect(() => {
-    var chart = bb.generate({
+    bb.generate({
       padding: {
         top: 10,
         bottom: 15,

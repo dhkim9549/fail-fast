@@ -1,5 +1,4 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { NumericFormat } from "react-number-format";
 
 const columns = [
   {
@@ -38,9 +37,9 @@ const columns = [
 ];
 
 export default function DataTable({ stockList }) {
-  let rows = [];
+  const rows = [];
   stockList.forEach((e) => {
-    let row = {
+    const row = {
       id: e.stockNm,
       stockNm: e.stockNm,
       stockCap: Number(e.stockCap / 10000),
