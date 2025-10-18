@@ -6,7 +6,7 @@ export default function Footer() {
           <span>Get connected with us on social networks:</span>
         </div>
         <div className="flex justify-center">
-          <a href="https://github.com/dhkim9549/hf-nextjs-app/tree/main" target="_blank" className="text-gray-600">
+          <a href="https://github.com/dhkim9549/fail-fast" target="_blank" className="text-gray-600">
             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
               className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
               <path fill="currentColor"
