@@ -56,7 +56,7 @@ export async function getRcmdData(queryObj) {
 
   const apiStr =
     "" +
-    "?serviceKey=PW2VvwTvkcs%2FWMVLduXzeRL0BPjOYH%2B0wMnsQiyy5UgcrukEjAurATJUNkeA7T%2Bj47s3GAmLzHduip%2BfbxESlQ%3D%3D" +
+    "?serviceKey=FMlDZea1lXraZUHfgkfivAF3QAUV%2FNkhRUFRRfHYn1osLEHq2oUYbWhqbrlZ67ltk9DOeIFdLnLSWRbHJxtt6g%3D%3D" +
     "&pageNo=1" +
     "&numOfRows=100" +
     "&dataType=JSON";
@@ -101,7 +101,7 @@ export async function getProdInfo(grntDvcd) {
 
   const apiStr =
     "" +
-    "?serviceKey=PW2VvwTvkcs%2FWMVLduXzeRL0BPjOYH%2B0wMnsQiyy5UgcrukEjAurATJUNkeA7T%2Bj47s3GAmLzHduip%2BfbxESlQ%3D%3D" +
+    "?serviceKey=FMlDZea1lXraZUHfgkfivAF3QAUV%2FNkhRUFRRfHYn1osLEHq2oUYbWhqbrlZ67ltk9DOeIFdLnLSWRbHJxtt6g%3D%3D" +
     "&pageNo=1" +
     "&numOfRows=30" +
     "&dataType=JSON";
@@ -133,7 +133,7 @@ export async function getMaxRentAmtList(grntDvcd) {
 
   const apiStr =
     "" +
-    "?serviceKey=PW2VvwTvkcs%2FWMVLduXzeRL0BPjOYH%2B0wMnsQiyy5UgcrukEjAurATJUNkeA7T%2Bj47s3GAmLzHduip%2BfbxESlQ%3D%3D" +
+    "?serviceKey=FMlDZea1lXraZUHfgkfivAF3QAUV%2FNkhRUFRRfHYn1osLEHq2oUYbWhqbrlZ67ltk9DOeIFdLnLSWRbHJxtt6g%3D%3D" +
     "&pageNo=1" +
     "&numOfRows=100" +
     "&dataType=JSON";
@@ -165,7 +165,7 @@ export async function getJnseGrtdLoanRatList(loanYm) {
 
   const apiStr =
     "" +
-    "?serviceKey=PW2VvwTvkcs%2FWMVLduXzeRL0BPjOYH%2B0wMnsQiyy5UgcrukEjAurATJUNkeA7T%2Bj47s3GAmLzHduip%2BfbxESlQ%3D%3D" +
+    "?serviceKey=FMlDZea1lXraZUHfgkfivAF3QAUV%2FNkhRUFRRfHYn1osLEHq2oUYbWhqbrlZ67ltk9DOeIFdLnLSWRbHJxtt6g%3D%3D" +
     "&pageNo=1" +
     "&numOfRows=100" +
     "&dataType=JSON";
